@@ -1,0 +1,169 @@
+/* ========== root variables ========== */
+:root {
+  --paper: #fdf6e3;
+  --ink: #2b2b2b;
+  --accent: #b58900;
+  --highlight: #dc322f;
+  --shadow: #aaa;
+}
+
+/* ========== base ========== */
+body {
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--paper);
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-repeat: repeat;
+  color: var(--ink);
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-shadow: 0.5px 0.5px var(--shadow);
+}
+
+/* ========== typing ========== */
+h1, h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1::after {
+  content: '|';
+  animation: blink 1s infinite;
+  margin-left: 5px;
+  color: var(--highlight);
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+p, li {
+  letter-spacing: 0.5px;
+}
+
+/* ========== navigation bar ========== */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fdf6e3bf;
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+#navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+#navbar li {
+  display: inline;
+  margin: 0 15px;
+}
+
+#navbar a {
+  background-color: #fbeec1;
+  border: 1px solid var(--shadow);
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 2px 2px 4px var(--shadow);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#navbar a:hover {
+  background-color: #fddc9b;
+  color: var(--highlight);
+}
+
+body {
+  margin-top: 60px;
+}
+
+/* ========== layout ========== */
+main {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+section {
+  background-color: #fffdf5;
+  border-left: 4px solid var(--accent);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 6px var(--shadow);
+}
+
+/* ========== header/footer ========== */
+header, footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: #555;
+  background-color: var(--paper);
+  border-top: 1px dashed var(--shadow);
+  border-bottom: 1px dashed var(--shadow);
+}
+
+/* ========== links ========== */
+a {
+  color: var(--highlight);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* ========== photo ========== */
+.image-pair {
+  display: flex;
+  justify-content: center;
+  gap: 8px; 
+  margin-top: 20px;
+}
+
+.image-pair img {
+  max-height: 400px; 
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ========== skills ========== */
+.skill-box {
+  display: inline-block;
+  background-color: var(--paper);
+  border: 1px dashed var(--accent);
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: var(--ink);
+  text-shadow: 0.5px 0.5px var(--shadow);
+  box-shadow: 1.5px 1.5px 3px var(--shadow);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.skill-box:hover {
+  background-color: #fbeec1;
+  color: var(--highlight);
+  transform: scale(1.05);
+  cursor: default;
+}
+
+
