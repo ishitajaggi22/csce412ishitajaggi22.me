@@ -1,0 +1,236 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap');
+
+/* root vars */
+:root {
+  --font-main: 'Quicksand', sans-serif;
+  --font-display: 'Pacifico', cursive;
+  
+  /* palette - pastel colors */
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --font-color: #4f5b66;
+  --shadow-color: rgba(150, 150, 180, 0.15);
+
+  --pastel-pink: #fecde1;
+  --pastel-purple: #d7bde2;
+  --pastel-blue: #a9cce3;
+  --pastel-green: #a3e4d7;
+  --link-color: forestgreen;
+}
+
+/* background animation */
+@keyframes background-pan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  padding-right: 220px;
+  font-family: var(--font-main);
+  color: var(--font-color);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding-top: 100px;
+  background-image: linear-gradient(120deg, var(--pastel-pink), var(--pastel-purple), var(--pastel-blue), var(--pastel-green));
+  /* background-size: 400% 400%; */
+  animation: background-pan 15s ease infinite; /* background animation */
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: #fff;
+  text-shadow: 2px 2px 5px var(--shadow-color);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid var(--pastel-pink);
+    padding-bottom: 10px;
+}
+
+#navbar {
+  background-color: var(--card-bg);
+  box-shadow: -10px 0 30px var(--shadow-color);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px; 
+  height: 100%; 
+  z-index: 1000;
+}
+
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+#navbar a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--font-color);
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+#navbar a:hover {
+  background-color: var(--pastel-pink);
+  color: #fff;
+}
+
+button#style-switcher {
+  display: block;
+  margin: 2rem auto;
+  padding: 12px 25px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background-image: linear-gradient(90deg, var(--pastel-pink), var(--pastel-purple));
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(220, 150, 180, 0.4);
+  transition: all 0.3s ease;
+}
+
+button#style-switcher:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(220, 150, 180, 0.6);
+}
+
+.image-pair img {
+  width: 100%;
+  max-width: 45%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  align-items: center;
+  margin: 2rem 0;
+}
+
+a {
+  color: var(--link-color);
+  font-weight: 600;
+  text-decoration: none;
+  background-image: linear-gradient(to top, var(--pastel-pink) 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: 0 0;
+  transition: background-position 0.4s ease;
+  text-decoration: underline;
+}
+
+a:hover {
+  background-position: 0 100%;
+  color: #fff;
+}
+
+/* skills part under qualifications */
+  .skills-wrapper {
+    text-align: center;
+  }
+
+  .skill-box {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--pastel-blue);
+    color: var(--font-color);
+    border-radius: 20px;
+    padding: 8px 18px;
+    margin: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .skill-box:hover {
+    background-color: var(--pastel-blue);
+    color: #fff;
+    transform: scale(1.1);
+  }
+
+
+a[href="IshitaJaggi_Resume.pdf"] {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-image: linear-gradient(90deg, var(--pastel-pink), var(--pastel-purple));
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(220, 150, 180, 0.4);
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    background-size: 100% 100%;
+    background-position: 0 0;
+}
+
+a[href="IshitaJaggi_Resume.pdf"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(220, 150, 180, 0.6);
+}
+
+/* layout/copyright */
+body {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 4rem; 
+}
+
+p[align="center"] {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+}
+
+/* index */
+.index-container {
+  display: flex;
+  gap: 2rem;
+}
+.column-left {
+  width: 80%;
+}
+.column-right {
+  width: 50%;
+}
+
+/* portfolio*/
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* qualifications */
+.qualifications-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* service */
+.service-container {
+  display: flex;
+  gap: 2rem;
+}
+.service-item {
+  width: 50%;
+}
